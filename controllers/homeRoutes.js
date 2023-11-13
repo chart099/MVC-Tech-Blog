@@ -7,9 +7,9 @@ router.get('/', async (req, res) => {
       const postsData = await Posts.findAll({
         include: [Users],
       });
-      const posts = postsData.map((post) => posts.get({ plain: true }));
-
-      res.render('homepage', {posts});
+      const posts = postsData.map((post) => post.get({ plain: true }));
+      console.log(posts);
+      res.render('homepage');
     } catch (err) {
       res.status(500).json(err);
     }
@@ -18,20 +18,20 @@ router.get('/', async (req, res) => {
 
   router.get('/post/:id', async (req, res) => {
     try {
-      const postsData = await Posts.findByPk(req.params.id, {
+      const postData = await Posts.findByPk(req.params.id, {
         include: [
-            Users, 
-            {
-                model: Comments,
-                inlcude: [Users]
-            }
+          Users,
+          {
+            model: Comments,
+            include: [Users]
+          }
         ],
       });
   
-      const posts = postsData.get({ plain: true });
+      const post = postData.get({ plain: true });
   
       res.render('singlePost', {
-        posts,
+        post,
    
       });
     } catch (err) {
@@ -63,7 +63,6 @@ router.get('/', async (req, res) => {
       res.redirect('/dashboard');
       return;
     }
-  
     res.render('login');
   });
 

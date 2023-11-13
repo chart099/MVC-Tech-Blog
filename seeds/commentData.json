@@ -1,14 +1,11 @@
 [
     {
-      "comment_content": "lorem ipsum",
-      "date_created": "10/30/23"
+      "comment_content": "lorem ipsum"
     },
     {
-        "comment_content": "lorem ipsum ipsum",
-        "date_created": "10/30/23"
+        "comment_content": "lorem ipsum ipsum"
       },
       {
-        "comment_content": "lorem ipsum lorem ipsum",
-        "date_created": "10/30/23"
+        "comment_content": "lorem ipsum lorem ipsum"
       }
   ]

@@ -21,15 +21,12 @@ const seedDatabase = async () => {
     });
   }
 
-//   const posts = await Posts.bulkCreate(postsData, {
-//     individualHooks: true,
-//     returning: true,
-//   });
+
 
 for (const comment of commentsData) {
         await Comments.create({
           ...comment,
-          post_id: users[Math.floor(Math.random() * posts.length)].id,
+          post_id: postsData[Math.floor(Math.random() * postsData.length)].id,
         });
   }
 

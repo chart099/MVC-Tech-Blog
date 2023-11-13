@@ -1,17 +1,15 @@
 [
     {
       "post_title": "Test Post 1",
-      "post_content": "lorem ipsum",
-      "date_created": "10/30/23"
+      "post_content": "lorem ipsum"
+
     },
     {
         "post_title": "Test Post 2",
-        "post_content": "lorem ipsum ipsum",
-        "date_created": "10/30/23"
+        "post_content": "lorem ipsum ipsum"
       },
       {
         "post_title": "Test Post 3",
-        "post_content": "lorem ipsum lorem ipsum",
-        "date_created": "10/30/23"
+        "post_content": "lorem ipsum lorem ipsum"
       }
   ]
